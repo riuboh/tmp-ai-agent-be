@@ -4,14 +4,21 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@ai-sdk/openai": "^2.0.65",
     "@hono/node-server": "^1.19.6",
-    "hono": "^4.10.5"
+    "ai": "^5.0.93",
+    "dotenv": "^17.2.3",
+    "hono": "^4.10.5",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
+    "prettier": "3.6.2",
     "tsx": "^4.7.1",
     "typescript": "^5.8.3"
   }
