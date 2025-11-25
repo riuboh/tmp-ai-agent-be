@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import { openai } from '@ai-sdk/openai';
 import { createUIMessageStream, streamText, tool, type UIMessage } from 'ai';
-import { z } from 'zod';
 
 export type MyUIMessage = UIMessage<
   unknown, // 第1引数: Metadata（使用しない場合は unknown）
@@ -11,6 +10,7 @@ export type MyUIMessage = UIMessage<
   }
 >;
 
+// UIメッセージストリームを作成（お試し）
 const stream = createUIMessageStream<MyUIMessage>({
   execute: async ({ writer }) => {
     writer.write({
